@@ -7,6 +7,10 @@ const {
     Vote
 } = require('../models');
 
+router.get('/homepage', (req, res) => {
+    res.render("homepage");
+});
+
 // get all posts for homepage
 router.get('/', (req, res) => {
     console.log('======================');
@@ -36,6 +40,7 @@ router.get('/', (req, res) => {
             const posts = dbPostData.map(post => post.get({
                 plain: true
             }));
+            console.log(posts)
 
             res.render('homepage', {
                 posts,

@@ -1,4 +1,5 @@
 <ol class="post-list">
+    {{#if posts}}
     {{#each posts as |post|}}
     <li>
         <article class="post">
@@ -22,4 +23,7 @@
         </ol>
     </li>
     {{/each}}
+    {{else}} 
+    <h1>No posts yet! Add a new post.</h1>
+    {{/if}}
 </ol>

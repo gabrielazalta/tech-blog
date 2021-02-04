@@ -25,6 +25,7 @@ const helpers = require('./utils/helpers');
 
 const hbs = exphbs.create({ helpers });
 
+//set Handlebars as the default template engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
