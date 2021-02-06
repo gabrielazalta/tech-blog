@@ -1,19 +1,3 @@
-<section>
-    <h2>Create New Post</h2>
-
-    <form class="new-post-form">
-        <div class="form-group">
-            <label for="post-title">Title</label>
-            <textarea class="form-control" type="text" id="post-title" name="post-title"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="post-url">Post Content</label>
-            <textarea class="form-control" id="post-url" name="post-url" rows="4"></textarea>
-        </div>
-        <button type="button" class="btn btn-info">Create</button>
-    </form>
-</section>
-
 {{#if posts.length}}
 <section>
     <h2>Your Posts</h2>
@@ -27,7 +11,9 @@
     </ol>
 </section>
 {{else}}
-<h2>No posts yet!</h2>
+<h2>No posts yet, add one now!</h2>
 {{/if}}
+
+<button type="submit" class="btn btn-info"><a class="link" href="/dashboard/new">add a new post</a></button>
 
 <script src="/javascript/add-post.js"></script>

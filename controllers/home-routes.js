@@ -3,8 +3,7 @@ const sequelize = require('../config/connection');
 const {
     Post,
     User,
-    Comment,
-    Vote
+    Comment
 } = require('../models');
 
 router.get('/homepage', (req, res) => {
@@ -19,8 +18,7 @@ router.get('/', (req, res) => {
                 'id',
                 'post_url',
                 'title',
-                'created_at',
-                [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+                'created_at'
             ],
             include: [{
                     model: Comment,
@@ -71,8 +69,7 @@ router.get('/post/:id', (req, res) => {
                 'id',
                 'post_url',
                 'title',
-                'created_at',
-                [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+                'created_at'
             ],
             include: [{
                     model: Comment,
