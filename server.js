@@ -8,8 +8,8 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: process.env.DB_SESSION_SECRET,
-  cookie: {},
+  secret: 'super secret',
+  cookie: {expires: 10 * 60 * 1000},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
