@@ -17,20 +17,23 @@
         <header class="bg-secondary h-100">
             <nav class="nav textFont">
 
-                {{#if loggedIn}}
                 <a class="nav-link text-white" href="/homepage">homepage</a>
+                
+                {{#if loggedIn}}
                 <a class="nav-link text-white" href="/dashboard">dashboard</a>
                 <a class="nav-link text-white" id="logout">logout</a>
                 
                 {{else}}
-                <a class="nav-link text-white" href="/homepage">homepage</a>
                 <a class="nav-link text-white notlogged" href="/login">dashboard</a>
                 <a class="nav-link text-white notlogged" href="/login">login</a>
                 {{/if}}
             </nav>
-            <h2>
+            </br>
+            <h2 class="ml-2 pl-2">
                 <a href="/" class="navFont fw-bold bg-light text-secondary">The Tech Blog</a>
             </h2>
+            </br>
+            
         </header>
         <main>
             {{{ body }}}

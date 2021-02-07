@@ -1,9 +1,11 @@
 <article class="post">
-    <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>({{format_url post_url}})</span>
-    </div>
-    <div class="meta">
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-    </div>
+    <form class="comment-form post m-2 p-2">
+        <div class="form-group title textFont">
+            <h4 href="{{post_url}}" target="_blank" class="text-body font-weight-bold">{{title}}</h4>
+            <h5 class="text-dark">{{format_url post_url}}</h5>
+        </div>
+        <div>
+            <a class="text-info textFont" href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div>
+    </form>
 </article>
