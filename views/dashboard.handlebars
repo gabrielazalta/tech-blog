@@ -4,12 +4,10 @@
     {{#each posts as |post|}}
     <div class="card post" style="width: 18rem;">
         <div class="card-body title">
-            <h5 class="card-title"><a href="/post/{{id}}" target="_blank" class="textFont text-body">{{title}}</a></h5>
-            <p class="card-text text-muted">{{format_url post_url}}</p>
+            <h4 class="card-title"><a href="/dashboard/edit/{{post.id}}" class="edit-link text-dark textFont">{{title}}</a></h4>
+            <h5></h5><p class="card-text text-muted">{{format_url post_url}}</p></h5>
             <a class="card-link"><a href="/post/{{id}}" class="text-info textFont">{{comments.length}}
                     {{format_plural "comment" comments.length}}</a></a>
-            <a class="card-link"><a href="/dashboard/edit/{{post.id}}" class="edit-link text-info textFont"> | edit
-                    post</a></a>
         </div>
         {{/each}}
     </div>

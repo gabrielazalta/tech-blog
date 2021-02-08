@@ -1,13 +1,9 @@
 {{!-- sign up form --}}
 <h3 class="navFont p-1">SIGN UP</h3>
-<form class="signup-form m-3 p-3">
+<form id="signup-form" class="signup-form m-3 p-3">
   <div class="mb-3">
     <label for="username-signup" class="form-label">username</label>
     <input type="text" class="form-control" id="username-signup" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="email-signup" class="form-label">email</label>
-    <input type="email" class="form-control" id="email-signup">
   </div>
   <div class="mb-3">
     <label for="password-signup" class="form-label">password</label>
@@ -17,5 +13,7 @@
   <button type="submit" class="btn btn-info">sign up</button>
 </form>
 
+  </br>
+  <a class="text-info textFont" href="/dashboard"> &larr; Back to login</a>
 
-<script src="/javascript/login.js"></script>
+<script src="/javascript/signup.js"></script>
