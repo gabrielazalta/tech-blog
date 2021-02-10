@@ -14,6 +14,7 @@ router.get('/signup', (req, res) => {
     res.render("signup");
 });
 
+
 // get all posts for homepage
 router.get('/', (req, res) => {
     console.log('======================');
